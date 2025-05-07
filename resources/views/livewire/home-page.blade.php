@@ -17,20 +17,26 @@
                     <div class="absolute bottom-1/3 right-1/4 w-28 h-28 md:w-36 md:h-36 bg-accent-500/20 rounded-full blur-2xl"></div>
                     <div class="relative z-10 grid grid-cols-2 gap-3">
                         <div class="card p-3 row-span-2 transform rotate-1">
-                            <div class="w-full h-40 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg"></div>
+                            <div class="w-full h-40 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg">
+                                <img src="/imgs/hero-section-tech.png" class="w-full h-full object-cover rounded-lg">
+                            </div>
                             <div class="mt-2">
                                 <div class="h-3 w-4/5 bg-gray-200 dark:bg-gray-700 rounded"></div>
                                 <div class="h-2 w-3/5 bg-gray-200 dark:bg-gray-700 rounded mt-1"></div>
                             </div>
                         </div>
                         <div class="card p-3 transform -rotate-2">
-                            <div class="w-full h-20 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-lg"></div>
+                            <div class="w-full h-20 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-lg">
+                                <img src="/imgs/hero-section-anim.jpg" class="h-full w-full object-cover rounded-lg">
+                            </div>
                             <div class="mt-2">
                                 <div class="h-3 w-4/5 bg-gray-200 dark:bg-gray-700 rounded"></div>
                             </div>
                         </div>
                         <div class="card p-3 transform rotate-3">
-                            <div class="w-full h-20 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg"></div>
+                            <div class="w-full h-20 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg">
+                                <img src="/imgs/hero-section-manh.jpg" class="h-full w-full object-cover rounded-lg">
+                            </div>
                             <div class="mt-2">
                                 <div class="h-3 w-4/5 bg-gray-200 dark:bg-gray-700 rounded"></div>
                             </div>
@@ -46,21 +52,33 @@
         <div class="container mx-auto px-4 md:px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <a href="#" class="group relative overflow-hidden rounded-xl">
-                    <div class="aspect-video bg-gradient-to-br from-primary-500 to-primary-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
-                        <h3 class="text-2xl font-bold text-white mb-2">Teknologi</h3>
-                        <p class="text-white/80">Perkembangan terbaru di dunia teknologi</p>
+                    <div class="aspect-video relative p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('imgs/tech-category.png') }}')"></div>
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-2">Teknologi</h3>
+                            <p class="text-white/80">Perkembangan terbaru di dunia teknologi</p>
+                        </div>
                     </div>
                 </a>
                 <a href="#" class="group relative overflow-hidden rounded-xl">
-                    <div class="aspect-video bg-gradient-to-br from-secondary-500 to-secondary-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
-                        <h3 class="text-2xl font-bold text-white mb-2">Anime</h3>
-                        <p class="text-white/80">Ulasan dan berita anime terkini</p>
+                    <div class="aspect-video relative p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('imgs/anim-category.png') }}')"></div>
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-2">Anime</h3>
+                            <p class="text-white/80">Ulasan dan berita anime terkini</p>
+                        </div>
                     </div>
                 </a>
                 <a href="#" class="group relative overflow-hidden rounded-xl">
-                    <div class="aspect-video bg-gradient-to-br from-accent-500 to-accent-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
-                        <h3 class="text-2xl font-bold text-white mb-2">Manhwa</h3>
-                        <p class="text-white/80">Rekomendasi dan update manhwa populer</p>
+                    <div class="aspect-video relative p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('imgs/manhwa-category.jpg') }}')"></div>
+                        <div class="absolute inset-0 bg-black/40"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-2">Manhwa</h3>
+                            <p class="text-white/80">Rekomendasi dan update manhwa populer</p>
+                        </div>
                     </div>
                 </a>
             </div>
