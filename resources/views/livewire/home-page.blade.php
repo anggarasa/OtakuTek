@@ -40,4 +40,205 @@
             </div>
         </div>
     </section>
+
+    <!-- Categories -->
+    <section class="py-8 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="#" class="group relative overflow-hidden rounded-xl">
+                    <div class="aspect-video bg-gradient-to-br from-primary-500 to-primary-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
+                        <h3 class="text-2xl font-bold text-white mb-2">Teknologi</h3>
+                        <p class="text-white/80">Perkembangan terbaru di dunia teknologi</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative overflow-hidden rounded-xl">
+                    <div class="aspect-video bg-gradient-to-br from-secondary-500 to-secondary-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
+                        <h3 class="text-2xl font-bold text-white mb-2">Anime</h3>
+                        <p class="text-white/80">Ulasan dan berita anime terkini</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative overflow-hidden rounded-xl">
+                    <div class="aspect-video bg-gradient-to-br from-accent-500 to-accent-700 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:scale-105">
+                        <h3 class="text-2xl font-bold text-white mb-2">Manhwa</h3>
+                        <p class="text-white/80">Rekomendasi dan update manhwa populer</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section id="featured" class="py-12 lg:py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Artikel Unggulan</h2>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline font-medium">Lihat Semua</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-video bg-gradient-to-br from-primary-400 to-primary-600"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-primary-500 text-white">Teknologi</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2 line-clamp-2">Perkembangan AI Dalam 5 Tahun Terakhir</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">Bagaimana artificial intelligence berkembang pesat dan mengubah cara kita bekerja dan hidup dalam lima tahun terakhir.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Adi Nugroho</span>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-500">5 Mei 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-video bg-gradient-to-br from-secondary-400 to-secondary-600"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-secondary-500 text-white">Anime</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2 line-clamp-2">10 Anime Terbaik Musim Ini Yang Wajib Ditonton</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">Rangkuman anime-anime pilihan dengan rating tertinggi yang tayang pada musim ini.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Dewi Lestari</span>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-500">3 Mei 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-video bg-gradient-to-br from-accent-400 to-accent-600"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-accent-500 text-white">Manhwa</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2 line-clamp-2">5 Manhwa Action-Fantasy Dengan Cerita Terbaik</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">Rekomendasi manhwa bergenre action-fantasy dengan alur cerita yang kompleks dan karakter yang berkesan.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Budi Santoso</span>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-500">1 Mei 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="py-12 lg:py-16 bg-gray-50 dark:bg-gray-800/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Artikel Terbaru</h2>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline font-medium">Lihat Semua</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Latest 1 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-square bg-gradient-to-br from-primary-400/80 to-primary-600/80"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-primary-500 text-white">Teknologi</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Tips Mengoptimalkan Kinerja Website Dengan NextJS</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">Panduan lengkap meningkatkan performa website menggunakan framework NextJS.</p>
+                        <span class="text-sm text-gray-500 dark:text-gray-500">29 Apr 2025</span>
+                    </div>
+                </article>
+
+                <!-- Latest 2 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-square bg-gradient-to-br from-secondary-400/80 to-secondary-600/80"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-secondary-500 text-white">Anime</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Analisis Mendalam: Pengaruh Anime pada Budaya Global</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">Bagaimana anime Jepang mempengaruhi tren dan budaya populer di seluruh dunia.</p>
+                        <span class="text-sm text-gray-500 dark:text-gray-500">27 Apr 2025</span>
+                    </div>
+                </article>
+
+                <!-- Latest 3 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-square bg-gradient-to-br from-accent-400/80 to-accent-600/80"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-accent-500 text-white">Manhwa</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Perbedaan Gaya Gambar Manhwa, Manga, dan Manhua</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">Perbandingan ciri khas visual dan storytelling dari tiga jenis komik Asia yang populer.</p>
+                        <span class="text-sm text-gray-500 dark:text-gray-500">25 Apr 2025</span>
+                    </div>
+                </article>
+
+                <!-- Latest 4 -->
+                <article class="card">
+                    <div class="relative">
+                        <div class="aspect-square bg-gradient-to-br from-primary-400/80 to-secondary-600/80"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="tag bg-primary-500 text-white">Teknologi</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2 line-clamp-2">Pemula Programming: Panduan Lengkap Belajar Coding</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">Langkah-langkah memulai perjalanan menjadi seorang programmer dari nol.</p>
+                        <span class="text-sm text-gray-500 dark:text-gray-500">22 Apr 2025</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="container flex flex-col items-center justify-between px-6 py-8 mx-auto lg:flex-row">
+            <a href="{{ route('home') }}" class="font-bold text-2xl bg-gradient-to-r from-primary-500 to-secondary-500 text-transparent bg-clip-text mb-4">OtakuTek</a>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-6 lg:gap-6 lg:mt-0">
+                <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                    Beranda
+                </a>
+
+                <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                    teknologi
+                </a>
+
+                <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                    Anime
+                </a>
+                <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                    Manhwa
+                </a>
+
+                <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                    Tentang
+                </a>
+            </div>
+
+            <p class="mt-6 text-gray-500 lg:mt-0 dark:text-gray-400">© Copyright {{ date('Y') }} OtakuTek. </p>
+        </div>
+    </footer>
 </div>
