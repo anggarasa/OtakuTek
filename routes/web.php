@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', \App\Livewire\HomePage::class)->name('home');
 
+Route::get('/tech', \App\Livewire\Tech\Teknologi::class)->name('tech');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

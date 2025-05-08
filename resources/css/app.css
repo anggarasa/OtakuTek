@@ -85,6 +85,37 @@
     .btn {
         @apply px-4 py-2 rounded-lg font-medium transition-colors;
     }
+
+    .card-hover {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    .card-hover:hover {
+        @apply -translate-y-1;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, var(--color-primary-500), var(--color-secondary-500));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-bg {
+        background: linear-gradient(135deg, var(--color-primary-600), var(--color-secondary-700));
+    }
+
+    .dark .gradient-bg {
+        background: linear-gradient(135deg, var(--color-primary-900), var(--color-secondary-900));
+    }
+
+    .tag-pill {
+        @apply transition-all duration-200 ease-in-out;
+    }
+
+    .tag-pill:hover {
+        @apply scale-[1.05];
+    }
 }
 
 [data-flux-field]:not(ui-radio, ui-checkbox) {
