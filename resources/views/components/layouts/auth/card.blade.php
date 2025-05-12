@@ -14,7 +14,7 @@
                 <div class="absolute bottom-10 left-10 z-20">
                     <h2 class="text-4xl font-bold text-white mb-2">OtakuTek</h2>
 
-                    <p class="text-blue-100 text-lg">Where Technology Meets Anime</p>
+                    <p class="text-blue-100 text-lg">Dimensi Digitalmu Dimulai di Sini</p>
                 </div>
             </div>
 
