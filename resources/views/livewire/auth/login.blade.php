@@ -12,7 +12,7 @@
         <form wire:submit="login">
             <div class="space-y-5">
                 <div>
-                    <flux:input type="email" wire:model="email" label="Email" icon="envelope" class:input="transition duration-200" placeholder="your@example.com" />
+                    <flux:input type="email" wire:model="email" label="Email" icon="envelope" class:input="transition duration-200" placeholder="your@example.com" required />
                 </div>
 
                 <div>
@@ -25,7 +25,7 @@
                     </div>
 
                     <div>
-                        <flux:input type="password" wire:model="password" id="password" icon="lock-closed" class:input="transition duration-200" placeholder="******" viewable />
+                        <flux:input type="password" wire:model="password" id="password" icon="lock-closed" class:input="transition duration-200" placeholder="******" viewable required />
                     </div>
                 </div>
 
@@ -36,9 +36,29 @@
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200">
-                        Masuk
+                    <button
+                        type="submit"
+                        class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200 relative min-h-[44px]"
+                        wire:click="login"
+                        wire:loading.attr="disabled"
+                        wire:target="login"
+                    >
+                        <!-- Teks tombol normal -->
+                        <span wire:loading.remove wire:target="login">
+                            Masuk
+                        </span>
+
+                        <!-- State loading -->
+                        <span
+                            class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-2"
+                            wire:loading
+                            wire:target="login"
+                        >
+                            <i class="fas fa-circle-notch fa-spin text-white"></i>
+                            <span class="text-sm">Loading...</span>
+                        </span>
                     </button>
+
 
                     <button type="button" class="mt-3 w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-400 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200">
                         <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="w-7 h-7 mr-2 inline">

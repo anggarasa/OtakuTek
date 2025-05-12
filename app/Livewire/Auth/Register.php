@@ -44,4 +44,23 @@ class Register extends Component
 
         $this->redirect(route('dashboard', absolute: false), navigate: true);
     }
+
+    protected $messages = [
+        'username.unique' => 'Username sudah digunakan.',
+        'email.unique' => 'Email sudah digunakan.',
+        'password.confirmed' => 'Password tidak sama.',
+        'password.min' => 'Password minimal 8 karakter.',
+        'password.max' => 'Password maksimal 255 karakter.',
+        'password.required' => 'Password wajib diisi.',
+        'email.required' => 'Email wajib diisi.',
+        'email.email' => 'Email tidak valid.',
+        'username.required' => 'Username wajib diisi.',
+        'username.min' => 'Username minimal 3 karakter.',
+        'username.max' => 'Username maksimal 255 karakter.',
+        'name.required' => 'Nama wajib diisi.',
+        'name.max' => 'Nama maksimal 255 karakter.',
+        'name.string' => 'Nama harus berupa string.',
+        'email.string' => 'Email harus berupa string.',
+        'email.lowercase' => 'Email harus berupa huruf kecil.',
+    ];
 }

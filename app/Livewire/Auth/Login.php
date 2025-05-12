@@ -15,10 +15,12 @@ use Livewire\Component;
 #[Layout('components.layouts.auth')]
 class Login extends Component
 {
-    #[Validate('required|string|email')]
+    #[Validate('required', message: 'Email wajib diisi.')]
+    #[Validate('string')]
+    #[Validate('email', message: 'Email atau password salah.')]
     public string $email = '';
 
-    #[Validate('required|string')]
+    #[Validate('required|string', message: 'Email atau Password salah.')]
     public string $password = '';
 
     public bool $remember = false;
@@ -36,7 +38,7 @@ class Login extends Component
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
-                'email' => __('auth.failed'),
+                'email' => __('Email atau Password salah.'),
             ]);
         }
 
@@ -60,7 +62,7 @@ class Login extends Component
         $seconds = RateLimiter::availableIn($this->throttleKey());
 
         throw ValidationException::withMessages([
-            'email' => __('auth.throttle', [
+            'email' => __("Anda terlalu banyak mencoba login. Silakan coba lagi dalam :seconds detik (:minutes menit).", [
                 'seconds' => $seconds,
                 'minutes' => ceil($seconds / 60),
             ]),
