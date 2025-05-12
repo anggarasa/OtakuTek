@@ -1,5 +1,9 @@
 <div class="flex flex-col gap-6">
-    <x-auth-header :title="__('Create an account')" :description="__('Enter your details below to create your account')" />
+    <div class="text-center mb-8 md:mb-10 z-20">
+        <a href="{{ route('home') }}" class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0ea5e9] to-[#d946ef]">OtakuTek</a>
+
+        <p class="mt-3 text-gray-600">Masukkan detail Anda di bawah ini untuk membuat akun Anda</p>
+    </div>
 
     <!-- Session Status -->
     <x-auth-session-status class="text-center" :status="session('status')" />

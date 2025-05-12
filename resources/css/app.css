@@ -55,6 +55,10 @@
     --color-accent-700: #0f766e;
     --color-accent-800: #115e59;
     --color-accent-900: #134e4a;
+
+    --color-accent: var(--color-accent-500);
+    --color-accent-content: var(--color-accent-600);
+    --color-accent-foreground: var(--color-white);
 }
 
 @layer theme {
