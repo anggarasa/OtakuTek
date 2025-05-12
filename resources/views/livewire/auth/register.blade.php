@@ -5,62 +5,55 @@
         <p class="mt-3 text-gray-600">Masukkan detail Anda di bawah ini untuk membuat akun Anda</p>
     </div>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="text-center" :status="session('status')" />
+    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
+        <!-- Session Status -->
+        <x-auth-session-status class="text-center" :status="session('status')" />
 
-    <form wire:submit="register" class="flex flex-col gap-6">
-        <!-- Name -->
-        <flux:input
-            wire:model="name"
-            :label="__('Name')"
-            type="text"
-            required
-            autofocus
-            autocomplete="name"
-            :placeholder="__('Full name')"
-        />
+        <form wire:submit="register">
+            <div class="space-y-5">
+                <!-- Name -->
+                <div>
+                    <flux:input type="text" wire:model="name" label="Nama Lengkap" class:input="transition duration-200" placeholder="John Doe" />
+                </div>
 
-        <!-- Email Address -->
-        <flux:input
-            wire:model="email"
-            :label="__('Email address')"
-            type="email"
-            required
-            autocomplete="email"
-            placeholder="email@example.com"
-        />
+                <!-- Username -->
+                <div>
+                    <flux:input type="text" wire:model="username" label="Username" class:input="transition duration-200" placeholder="johndoe322" />
+                </div>
 
-        <!-- Password -->
-        <flux:input
-            wire:model="password"
-            :label="__('Password')"
-            type="password"
-            required
-            autocomplete="new-password"
-            :placeholder="__('Password')"
-            viewable
-        />
+                <!-- Email -->
+                <div>
+                    <flux:input type="email" wire:model="email" label="Email" class:input="transition duration-200" placeholder="email@example.com" />
+                </div>
 
-        <!-- Confirm Password -->
-        <flux:input
-            wire:model="password_confirmation"
-            :label="__('Confirm password')"
-            type="password"
-            required
-            autocomplete="new-password"
-            :placeholder="__('Confirm password')"
-            viewable
-        />
+                <!-- Password -->
+                <div>
+                    <flux:input type="password" wire:model="password" label="Password" class:input="transition duration-200" placeholder="Password" viewable />
+                </div>
 
-        <div class="flex items-center justify-end">
-            <flux:button type="submit" variant="primary" class="w-full">
-                {{ __('Create account') }}
-            </flux:button>
-        </div>
-    </form>
+                <!-- Konfirmasi Password -->
+                <div>
+                    <flux:input type="password" wire:model="password_confirmation" label="Konfirmasi Password" class:input="transition duration-200" placeholder="Konfirmasi Password" viewable/>
+                </div>
 
-    <div class="space-x-1 rtl:space-x-reverse text-center text-sm text-zinc-600 dark:text-zinc-400">
-        {{ __('Already have an account?') }}
-        <flux:link :href="route('login')" wire:navigate>{{ __('Log in') }}</flux:link>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200">
+                        Daftar
+                    </button>
+
+                    <button type="submit" class="mt-3 w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-400 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="w-7 h-7 mr-2 inline">
+                        Masuk dengan Google
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="text-center mt-8">
+        <p class="text-sm text-gray-600"> Sudah punya akun?
+            <a href="{{ route('login') }}" wire:navigate class="font-medium text-[#d946ef] hover:text-[#0ea5e9] transition duration-200"> Masuk </a>
+        </p>
     </div>
 </div>
