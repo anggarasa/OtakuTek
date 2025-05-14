@@ -5,6 +5,12 @@
         <p class="mt-3 text-gray-600">Masukkan email dan kata sandi Anda di bawah ini untuk masuk</p>
     </div>
 
+    @if(session('error'))
+        <div class="bg-red-100 border border-red-400 md:mb-10 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <span class="block sm:inline">{{ session('error') }}</span>
+        </div>
+    @endif
+
     <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
         <!-- Session Status -->
         <x-auth-session-status class="text-center" :status="session('status')" />
@@ -35,7 +41,8 @@
                     <label for="remember-me" class="ml-2 block text-sm text-gray-700 cursor-pointer"> Remember me </label>
                 </div>
 
-                <div class="pt-2">
+                <div class="pt-2 space-y-3">
+                    <!-- Tombol Login Utama -->
                     <button
                         type="submit"
                         class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200 relative min-h-[44px]"
@@ -59,12 +66,18 @@
                         </span>
                     </button>
 
-
-                    <button type="button" class="mt-3 w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-400 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200">
-                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="w-7 h-7 mr-2 inline">
-                        Masuk dengan Google
-                    </button>
-
+                    <!-- Tombol Login Google -->
+                    <a
+                        href="{{ route('google-redirect') }}"
+                        class="flex items-center justify-center w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-300 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200 text-gray-700"
+                    >
+                        <img
+                            src="https://developers.google.com/identity/images/g-logo.png"
+                            alt="Google Logo"
+                            class="w-5 h-5 mr-3"
+                        >
+                        <span>Masuk dengan Google</span>
+                    </a>
                 </div>
             </div>
         </form>

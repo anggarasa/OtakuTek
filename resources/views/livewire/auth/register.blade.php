@@ -36,7 +36,7 @@
                     <flux:input type="password" wire:model="password_confirmation" label="Konfirmasi Password" class:input="transition duration-200" placeholder="Konfirmasi Password" viewable/>
                 </div>
 
-                <div class="pt-2">
+                <div class="pt-2 space-y-3">
                     <button
                         type="submit"
                         class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200 relative min-h-[44px]"
@@ -60,11 +60,18 @@
                         </span>
                     </button>
 
-                    <button type="submit" class="mt-3 w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-400 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200">
-                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="w-7 h-7 mr-2 inline">
-                        Masuk dengan Google
-                    </button>
-
+                    <!-- Tombol Login Google -->
+                    <a
+                        href="{{ route('google-redirect') }}"
+                        class="flex items-center justify-center w-full py-2.5 px-4 rounded-lg font-medium bg-white border border-gray-300 hover:bg-gray-50 transform hover:-translate-y-0.5 transition duration-200 text-gray-700"
+                    >
+                        <img
+                            src="https://developers.google.com/identity/images/g-logo.png"
+                            alt="Google Logo"
+                            class="w-5 h-5 mr-3"
+                        >
+                        <span>Masuk dengan Google</span>
+                    </a>
                 </div>
             </div>
         </form>
