@@ -85,7 +85,7 @@
 
     <div class="text-center mt-8">
         <p class="text-sm text-gray-600"> Belum punya akun?
-            <a href="{{ route('register') }}" wire:navigate class="font-medium text-[#d946ef] hover:text-[#0ea5e9] transition duration-200"> Buat Akun </a>
+            <a href="{{ route('register') }}" wire:navigate class="font-medium text-secondary-500 hover:text-primary-500 transition duration-200"> Buat Akun </a>
         </p>
     </div>
 </div>
