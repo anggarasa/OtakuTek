@@ -41,7 +41,7 @@ class ResetPassword extends Component
     {
         $this->validate([
             'token' => ['required'],
-            'email' => ['required', 'string', 'email'],
+            'email' => ['required', 'string', 'email:dns,rfc,strict', 'max:255'],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -73,4 +73,13 @@ class ResetPassword extends Component
 
         $this->redirectRoute('login', navigate: true);
     }
+
+    protected $messages = [
+        'email.required' => 'Email wajib diisi.',
+        'email.email' => 'Email tidak valid.',
+        'password.required' => 'Password wajib diisi.',
+        'password.confirmed' => 'Password tidak sama.',
+        'password.min' => 'Password minimal 8 karakter.',
+        'password.max' => 'Password maksimal 255 karakter.',
+    ];
 }

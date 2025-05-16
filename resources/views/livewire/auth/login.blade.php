@@ -26,7 +26,7 @@
                         <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
 
                         @if (Route::has('password.request'))
-                            <a href="{{ route('password.request') }}" wire:navigate class="text-xs font-medium text-accent-500 hover:text-primary-500 hover:underline transition duration-200"> Forgot Password? </a>
+                            <a href="{{ route('password.request') }}" wire:navigate class="text-xs font-medium text-accent-500 hover:text-primary-500 hover:underline transition duration-200"> Lupa Kata Sandi? </a>
                         @endif
                     </div>
 
@@ -46,12 +46,10 @@
                     <button
                         type="submit"
                         class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200 relative min-h-[44px]"
-                        wire:click="login"
                         wire:loading.attr="disabled"
-                        wire:target="login"
                     >
                         <!-- Teks tombol normal -->
-                        <span wire:loading.remove wire:target="login">
+                        <span wire:loading.remove>
                             Masuk
                         </span>
 
@@ -59,7 +57,6 @@
                         <span
                             class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-2"
                             wire:loading
-                            wire:target="login"
                         >
                             <i class="fas fa-circle-notch fa-spin text-white"></i>
                             <span class="text-sm">Loading...</span>

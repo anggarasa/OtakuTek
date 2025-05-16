@@ -10,10 +10,6 @@
     @endif
 
     <div class="flex flex-col items-center justify-between space-y-3">
-{{--        <flux:button wire:click="sendVerification" variant="primary" class="w-full">--}}
-{{--            {{ __('Kirim ulang email verifikasi') }}--}}
-{{--        </flux:button>--}}
-
         <button
             type="button"
             class="w-full py-2.5 px-4 rounded-lg text-white font-medium bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:from-[#0c91ce] hover:to-[#c935dd] transform hover:-translate-y-0.5 transition duration-200 relative min-h-[44px]"
