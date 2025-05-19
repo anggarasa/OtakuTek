@@ -55,13 +55,14 @@ class GoogleLoginController extends Controller
                     'email' => $googleUser->email,
                     'password' => Hash::make(Str::random(32))
                 ]);
+                $user->assignRole('user');
 
                 if (!$user) {
                     throw new \Exception('Gagal membuat akun baru');
                 }
             }
 
-            Auth::login($user);
+            Auth::login($user, true);
 
             return redirect()->intended(route('dashboard'));
 
